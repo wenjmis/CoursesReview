@@ -66,9 +66,7 @@ export default {
     font-weight:bold ;
     text-shadow: black 0.1em 0.1em 0.1em;
   }
-  .LowerContent{
-    
-  }
+
 
   .time{
     float:right;
