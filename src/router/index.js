@@ -1,3 +1,4 @@
+var port = process.env.PORT || 8080;
 
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
