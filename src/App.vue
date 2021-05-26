@@ -17,6 +17,12 @@ export default {
   setup() {
     
   },
+  watch: {
+      '$route' (to, from) {
+        document.title = to.meta.title || 'Error'
+      }
+  },
+
 }
 </script>
 <style>

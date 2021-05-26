@@ -9,17 +9,30 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      auth: true,
+      title: 'CCUplus'
+    }
   },
   {
     path: '/create',
     name: 'Create',
-    component: Create
+    component: Create,
+    meta: {
+      auth: true,
+      title: 'CCUplus'
+    }
   },
   {
     path: '/details/:id',
     name: 'Details',
-    component: Details
+    component: Details,
+    meta: {
+      auth: true,
+      title: 'CCUplus'
+    }
+
   },
 ]
 
