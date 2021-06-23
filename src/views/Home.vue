@@ -39,9 +39,6 @@ export default {
   }
   .layout {
     position: relative;
-    display: grid center;
-    grid-template-columns: 3fr 1fr;
-    gap: 20px;
     background-color: rgb(112, 219, 192);
     padding:10px;
     margin: auto;

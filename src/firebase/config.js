@@ -17,5 +17,7 @@ const firebaseConfig = {
 const postsFirestore = firebase.firestore()
 const timestamp  = firebase.firestore.FieldValue.serverTimestamp()
 const projectAuth = firebase.auth()
+const increment = firebase.firestore.FieldValue.increment(1);
+const Decrement = firebase.firestore.FieldValue.increment(-1);
 
-export {postsFirestore,timestamp,projectAuth}
+export {postsFirestore,timestamp,projectAuth,increment,Decrement}

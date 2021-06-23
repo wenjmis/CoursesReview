@@ -6,7 +6,7 @@
     <input type="password" required placeholder="password" v-model="password">
     <div class="error">{{ error }}</div>
     <p class="register">還沒有帳號嗎?<span @click="showLogin = false">  Sign up</span> </p>
-    <button @login="enterHome">Log in</button>
+    <button >Log in</button>
   </form>
 </div>
 <div v-else>
@@ -35,8 +35,9 @@ export default {
       if (!error.value) {
         //emit a customer event
         context.emit('login')
+        router.push({name:'Home'})
       }
-      router.push({name:'Home'})
+    
     }
 
     return {showLogin, email, password, handleSubmit, error}

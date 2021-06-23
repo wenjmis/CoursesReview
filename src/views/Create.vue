@@ -63,7 +63,8 @@ export default {
         CourseName: CourseName.value,
         content: content.value,
         tags: tags.value,
-        createdAt: timestamp
+        createdAt: timestamp,
+        like:0
       }
       const res = await postsFirestore.collection('posts').add(post)
       // console.log(res) // can see the id and path of doc created
