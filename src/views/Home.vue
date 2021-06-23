@@ -1,4 +1,5 @@
 <template>
+  
   <div class="home">
     <div v-if="error">{{error}}</div>
     <div v-if="posts.length" class="layout">
@@ -14,6 +15,7 @@ import getPosts from '../composables/getposts.js'
 // component imports
 import PostList from '../components/PostList'
 import TagCloud from '../components/TagCloud.vue'
+
 
 export default {
   name: 'Home',
@@ -45,4 +47,5 @@ export default {
     margin: auto;
     border: lightsteelblue 2px;
   }
+  
 </style>

@@ -4,6 +4,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Create from '../views/Create.vue'
 import Details from '../views/Details.vue'
+import Account from '../views/Account.vue'
+
+
 
 const routes = [
   {
@@ -12,7 +15,7 @@ const routes = [
     component: Home,
     meta: {
       auth: true,
-      title: 'CCUplus'
+      title: 'CCUplus',
     }
   },
   {
@@ -21,7 +24,7 @@ const routes = [
     component: Create,
     meta: {
       auth: true,
-      title: 'CCUplus'
+      title: 'CCUplus',
     }
   },
   {
@@ -30,10 +33,19 @@ const routes = [
     component: Details,
     meta: {
       auth: true,
-      title: 'CCUplus'
+      title: 'CCUplus',
     }
-
   },
+  {
+    path: '/account',
+    name: 'Account',
+    component: Account,
+    meta: {
+      auth: true,
+      title: 'CCUplus',
+    }
+  },
+  
 ]
 
 const router = createRouter({

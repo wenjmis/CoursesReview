@@ -4,8 +4,8 @@
       <h3>CCU PLUS 課程評論網</h3>
       <!-- <h1>test</h1> -->
       <div  class="footerIcon">
-       <font-awesome-icon :icon="['fab', 'instagram']" class="fa fa-instagram fa-3x"/>
-       <font-awesome-icon :icon="['fab', 'github']" class="fa fa-github fa-3x"/>
+        <font-awesome-icon :icon="['fab', 'instagram']" class="fa fa-instagram fa-3x"/>
+        <font-awesome-icon :icon="['fab', 'github']" class="fa fa-github fa-3x"/>
       </div>
       <!-- <span class="material-icons">facebook</span>
       <div>

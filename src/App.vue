@@ -1,7 +1,6 @@
 <template>
   <Navbar/>
   <!-- <img src="./assets/ccuPlusLogo.png" alt="this is ccuplus logo"> -->
-  
   <router-view/>
   <Footer/>
 </template>
@@ -9,20 +8,25 @@
 import Navbar from './views/Navbar'
 import Footer from './views/Footer'
 
+
 export default {
   components:{
     Navbar,
-    Footer
+    Footer,
   },
   setup() {
     
   },
   watch: {
-      '$route' (to, from) {
+      '$route'(to, from,) {
+      // 製作title
         document.title = to.meta.title || 'Error'
-      }
-  },
 
+        
+      }
+      
+  },
+  
 }
 </script>
 <style>
