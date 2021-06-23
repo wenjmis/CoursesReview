@@ -1,5 +1,23 @@
 <template>
-  <div class="create">
+  <div class="create desktopView">
+    <form @submit.prevent="handleSubmit">
+      <label>課程名稱</label>
+      <input v-model="CourseName" type="text" required placeholder="必填欄位">
+      <label>評論內容</label>
+      <textarea v-model="content" required placeholder="必填欄位"></textarea>
+      <label>HashTags (按下Enter創建hashtag):</label>
+      <input 
+        @keydown.enter.prevent="handleKeydown" 
+        v-model="tag" 
+        type="text"
+      >
+      <div v-for="tag in tags" :key="tag" class="pill">
+        #{{ tag }}
+      </div>
+      <button>Add Post</button>
+    </form>
+  </div>
+    <div class="create mobileView">
     <form @submit.prevent="handleSubmit">
       <label>課程名稱</label>
       <input v-model="CourseName" type="text" required placeholder="必填欄位">
@@ -45,7 +63,8 @@ export default {
         CourseName: CourseName.value,
         content: content.value,
         tags: tags.value,
-        createdAt: timestamp
+        createdAt: timestamp,
+        like:0
       }
       const res = await postsFirestore.collection('posts').add(post)
       // console.log(res) // can see the id and path of doc created
@@ -57,11 +76,10 @@ export default {
 </script>
 
 <style>
-  form {
-    max-width: 480px;
-    margin: 0 auto;
-    text-align: left;
+  .create{
+    margin:30px 250px;
   }
+  
   input, textarea {
     display: block;
     margin: 10px 0;
@@ -112,5 +130,22 @@ export default {
     padding: 8px;
     border-radius: 20px;
     font-size: 14px;
+  }  
+  @media (min-width:501px){
+    .mobileView {
+      display: none;
+    }
+  }
+  @media (max-width:500px) {
+    .mobileView {
+      display: flex;
+      font-size: 20px;
+    }
+    .desktopView{
+      display: none;
+    }
+    .create{
+    margin:30px auto;
+    }
   }
 </style>

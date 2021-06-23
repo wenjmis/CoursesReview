@@ -2,16 +2,31 @@
   <Navbar/>
   <!-- <img src="./assets/ccuPlusLogo.png" alt="this is ccuplus logo"> -->
   <router-view/>
+  <Footer/>
 </template>
 <script>
 import Navbar from './views/Navbar'
+import Footer from './views/Footer'
+
+
 export default {
   components:{
-    Navbar
+    Navbar,
+    Footer,
   },
   setup() {
     
   },
+  watch: {
+      '$route'(to, from,) {
+      // 製作title
+        document.title = to.meta.title || 'Error'
+
+        
+      }
+      
+  },
+  
 }
 </script>
 <style>

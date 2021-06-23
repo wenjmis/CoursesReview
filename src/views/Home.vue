@@ -1,4 +1,5 @@
 <template>
+  
   <div class="home">
     <div v-if="error">{{error}}</div>
     <div v-if="posts.length" class="layout">
@@ -14,6 +15,7 @@ import getPosts from '../composables/getposts.js'
 // component imports
 import PostList from '../components/PostList'
 import TagCloud from '../components/TagCloud.vue'
+
 
 export default {
   name: 'Home',
@@ -37,12 +39,10 @@ export default {
   }
   .layout {
     position: relative;
-    display: grid center;
-    grid-template-columns: 3fr 1fr;
-    gap: 20px;
     background-color: rgb(112, 219, 192);
     padding:10px;
     margin: auto;
     border: lightsteelblue 2px;
   }
+  
 </style>
